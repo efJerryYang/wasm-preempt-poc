@@ -1,0 +1,12 @@
+[package]
+name = "wasm-preempt-poc"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# wasmtime = { version = "38.0.0", features = ["async"] }
+anyhow = "1"
+tokio = { version = "1.40", features = ["rt-multi-thread", "macros", "time"] }
+wat = "1"
+
+wasmtime = { path = "../wasmtime/crates/wasmtime", features = ["async"] }
